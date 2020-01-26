@@ -13,15 +13,5 @@ nav {
   }
 }
 
-.searchInput {
-  padding: 5px;
-  color: $netflixWhite;
-  border: 0;
-  background: transparent;
-  outline: none;
-  &:focus {
-    padding: 2px 5px 2px 5px;
-    border: solid 1px $netflixWhite;
-    border-radius: 3px;
-  }
-}
+
+
