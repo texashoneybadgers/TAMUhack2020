@@ -28,7 +28,7 @@
   font-size: 0.75em;
 }
 
-/* netflix-like carousel effects */
+/* city-like carousel effects */
 
 html {
   overflow: scroll;
@@ -47,7 +47,7 @@ html {
   width: 4%;
   height: 280px;
   z-index: 40;
-  background: $netflixBlack;
+  background: $cityBlack;
   opacity: 0.5;
   cursor: pointer;
   text-align: center;
@@ -63,7 +63,7 @@ html {
   width: 4%;
   height: 280px;
   z-index: 40;
-  background: $netflixBlack;
+  background: $cityBlack;
   opacity: 0.5;
   display: flex;
   cursor: pointer;

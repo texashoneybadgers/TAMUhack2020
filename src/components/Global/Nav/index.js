@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import netflixLogo from '@/assets/img/Netflix-logo.png';
+import cityLogo from '@/assets/chicagoWhite.png';
 
 const Nav = () => (
   <div>
@@ -11,10 +11,10 @@ const Nav = () => (
           <NavLink to='/' className='logo navItem'>
             <img
               style={{
-                width: 110,
-                height: 30,
+                width: 60,
+                height: 60,
               }}
-              src={netflixLogo}
+              src={cityLogo}
               alt='img'
             />
           </NavLink>

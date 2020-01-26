@@ -4,14 +4,14 @@ const Footer = () => (
   <footer className='footer-container'>
     <nav className='navbar navbar-light bg-faded'>
       <a className='navbar-brand text-danger font-weight-bold' href='/'>
-        Neflix
+        Concierge
       </a>
       <p className='text-muted lead' href='#'>
         &copy;2020. All Rights Reserved by Texas Honey Badgers.
       </p>
       <a
         className='navbar-brand text-muted'
-        href='https://github.com/yuchiu/netflix-clone'
+        href='https://texashoneybadgers.com'
       >
         github
       </a>
