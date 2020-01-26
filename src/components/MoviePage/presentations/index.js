@@ -1,4 +1,4 @@
-import Poster from "./Poster";
-import Descriptions from "./Descriptions";
+import Poster from './Poster';
+import Descriptions from './Descriptions';
 
 export { Descriptions, Poster };

@@ -1,6 +1,6 @@
-import React from "react";
-import ViewMovie from "./ViewMovie";
-import { Nav, Footer } from "@/components/Global";
+import React from 'react';
+import ViewMovie from './ViewMovie';
+import { Nav, Footer } from '@/components/Global';
 
 const Movie = () => (
   <div>

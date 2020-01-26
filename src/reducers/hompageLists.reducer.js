@@ -1,8 +1,8 @@
-import constants from "../constants";
+import constants from '../constants';
 
 const initialState = {
   hotels: [],
-  restaurants: []
+  restaurants: [],
 };
 
 export default (state = initialState, action) => {

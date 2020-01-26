@@ -1,10 +1,10 @@
-import React from "react";
-import Proptypes from "prop-types";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import Proptypes from 'prop-types';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-import { Poster, Descriptions } from "./presentations";
-import { movieAction } from "@/actions";
+import { Poster, Descriptions } from './presentations';
+import { placeAction } from '@/actions';
 
 class ViewMovie extends React.Component {
   componentDidMount() {
@@ -12,8 +12,8 @@ class ViewMovie extends React.Component {
       fetchTheMovie,
       fetchCast,
       match: {
-        params: { movieId }
-      }
+        params: { movieId },
+      },
     } = this.props;
 
     fetchTheMovie(movieId);
@@ -28,7 +28,7 @@ class ViewMovie extends React.Component {
   render() {
     const { castList, theMovie } = this.props;
     return (
-      <div id="moviePage-container">
+      <div id='moviePage-container'>
         <Poster
           posterPath={`http://image.tmdb.org/t/p/w500//${theMovie.poster_path}`}
         />
@@ -42,27 +42,27 @@ ViewMovie.propTypes = {
   theMovie: Proptypes.object,
   castList: Proptypes.array,
   fetchTheMovie: Proptypes.func,
-  fetchCast: Proptypes.func
+  fetchCast: Proptypes.func,
 };
 
 const stateToProps = state => ({
   theMovie: state.theMovieReducer.theMovie,
-  castList: state.castListReducer.castList.slice(0, 4)
+  castList: state.castListReducer.castList.slice(0, 4),
 });
 
 const dispatchToProps = dispatch => ({
-  fetchTheMovie: movieId => {
-    dispatch(movieAction.fetchTheMovie(movieId));
+  fetchTheMovie: (movieId) => {
+    dispatch(placeAction.fetchTheMovie(movieId));
   },
-  fetchCast: movieId => {
-    dispatch(movieAction.fetchCast(movieId));
+  fetchCast: (movieId) => {
+    dispatch(placeAction.fetchCast(movieId));
   },
-  clearTheMovie: () => dispatch(movieAction.clearTheMovie())
+  clearTheMovie: () => dispatch(placeAction.clearTheMovie()),
 });
 
 export default withRouter(
   connect(
     stateToProps,
-    dispatchToProps
-  )(ViewMovie)
+    dispatchToProps,
+  )(ViewMovie),
 );

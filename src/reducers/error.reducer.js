@@ -1,7 +1,7 @@
-import constants from "../constants";
+import constants from '../constants';
 
 const initialState = {
-  error: ""
+  error: '',
 };
 
 export default (state = initialState, action) => {

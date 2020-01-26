@@ -1,21 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import netflixLogo from "@/assets/img/Netflix-logo.png";
+import netflixLogo from '@/assets/img/Netflix-logo.png';
 
 const Nav = () => (
   <div>
-    <nav className="navbar">
+    <nav className='navbar'>
       <ul>
         <li>
-          <NavLink to="/" className="logo navItem">
+          <NavLink to='/' className='logo navItem'>
             <img
               style={{
                 width: 110,
-                height: 30
+                height: 30,
               }}
               src={netflixLogo}
-              alt="img"
+              alt='img'
             />
           </NavLink>
         </li>

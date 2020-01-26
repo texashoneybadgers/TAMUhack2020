@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import Router from "./components";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import Router from './components';
 
-import store from "./store";
+import store from './store';
 
 const app = (
   <Provider store={store}>
@@ -11,4 +11,4 @@ const app = (
   </Provider>
 );
 
-ReactDOM.render(app, document.getElementById("root"));
+ReactDOM.render(app, document.getElementById('root'));

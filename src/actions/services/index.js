@@ -1,3 +1,3 @@
-import placesAPI from "./placesAPI";
+import placesAPI from './placesAPI';
 
 export { placesAPI };

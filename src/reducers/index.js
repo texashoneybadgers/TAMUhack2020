@@ -1,13 +1,13 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-import thePlaceReducer from "./thePlace.reducer";
-import hompageListsReducer from "./hompageLists.reducer";
-import errorReducer from "./error.reducer";
+import thePlaceReducer from './thePlace.reducer';
+import hompageListsReducer from './hompageLists.reducer';
+import errorReducer from './error.reducer';
 
 const rootReducer = combineReducers({
   hompageListsReducer,
   thePlaceReducer,
-  errorReducer
+  errorReducer,
 });
 
 export default rootReducer;
