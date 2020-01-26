@@ -4,12 +4,13 @@ import { findDOMNode } from 'react-dom';
 import $ from 'jquery';
 import ListItem from './ListItem';
 
-class MovieList extends React.Component {
+class PlaceList extends React.Component {
   state = {
     margin: 0,
   };
 
-  renderMovieList = movieList => movieList.map(movie => <ListItem key={movie.id} movie={movie} />);
+  renderPlaceList = placeList => placeList.map(place => <ListItem
+   key={place.place_id} place={place} />);
 
   handleLeftClick = (e) => {
     e.preventDefault();
@@ -46,7 +47,7 @@ class MovieList extends React.Component {
   };
 
   render() {
-    const { movieList } = this.props;
+    const { placeList } = this.props;
     return (
       <div className='list-container'>
         <span
@@ -58,7 +59,7 @@ class MovieList extends React.Component {
         <div className='module-section clearfix'>
           {/* eslint-disable-next-line react/no-string-refs */}
           <ul id='content' ref='content'>
-            <div className='listRow'>{this.renderMovieList(movieList)}</div>
+            {/* <div className='listRow'>{this.renderPlaceList(placeList)}</div> */}
           </ul>
         </div>
 
@@ -72,7 +73,7 @@ class MovieList extends React.Component {
   }
 }
 
-MovieList.propTypes = {
-  movieList: Proptypes.array,
+PlaceList.propTypes = {
+  placeList: Proptypes.array,
 };
-export default MovieList;
+export default PlaceList;

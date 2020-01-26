@@ -1,55 +1,46 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
-import { MovieList, ListHeader } from './presentations';
+import { PlaceList, ListHeader } from './presentations';
 import { placeListAction, placeAction } from '@/actions';
 
 class HomeList extends React.Component {
   componentDidMount() {
-    const { fetchPopular, fetchTopRated, fetchUpcoming } = this.props;
-    fetchUpcoming();
-    fetchPopular();
-    fetchTopRated();
+    const { fetchRestaurants, fetchHotels } = this.props;
+    fetchRestaurants();
+    fetchHotels();
   }
 
   render() {
-    const { upcoming, topRated, popular } = this.props;
+    const { restaurants, hotels } = this.props;
     return (
       <div>
-        <ListHeader header='Up Coming' />
-        <MovieList movieList={upcoming} />
-        <ListHeader header='Popular' />
-        <MovieList movieList={popular} />
-        <ListHeader header='Top Rated' />
-        <MovieList movieList={topRated} />
+        <ListHeader header='Restaurants' />
+        <PlaceList PlaceList={restaurants} />
+        <ListHeader header='Lodging' />
+        <PlaceList PlaceList={hotels} />
       </div>
     );
   }
 }
 HomeList.propTypes = {
-  fetchUpcoming: Proptypes.func,
-  fetchPopular: Proptypes.func,
-  fetchTopRated: Proptypes.func,
-  upcoming: Proptypes.array,
-  topRated: Proptypes.array,
-  popular: Proptypes.array,
+  fetchRestaurants: Proptypes.func,
+  fetchHotels: Proptypes.func,
+  restaurants: Proptypes.array,
+  hotels: Proptypes.array,
 };
 
 const stateToProps = state => ({
-  upcoming: state.hompageListsReducer.upcoming,
-  topRated: state.hompageListsReducer.topRated,
-  popular: state.hompageListsReducer.popular,
+  restaurants: state.hompageListsReducer.restaurants,
+  hotels: state.hompageListsReducer.hotels,
 });
 
 const dispatchToProps = dispatch => ({
-  fetchUpcoming: () => {
-    dispatch(placeListAction.fetchUpcoming());
+  fetchRestaurants: () => {
+    dispatch(placeListAction.fetchRestaurants());
   },
-  fetchPopular: () => {
-    dispatch(placeListAction.fetchPopular());
-  },
-  fetchTopRated: () => {
-    dispatch(placeListAction.fetchTopRated());
+  fetchHotels: () => {
+    dispatch(placeListAction.fetchHotels());
   },
 });
 

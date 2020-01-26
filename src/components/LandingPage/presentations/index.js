@@ -1,5 +1,5 @@
 import Slider from './Slider';
-import MovieList from './MovieList';
+import PlaceList from './PlaceList';
 import ListHeader from './ListHeader';
 
-export { Slider, MovieList, ListHeader };
+export { Slider, PlaceList, ListHeader };

@@ -29,22 +29,13 @@ class ListItem extends React.Component {
     return <p className='tile-desc'>{desc}</p>;
   };
 
-  renderPic = (movie) => {
-    if (movie.backdrop_path !== null) {
+  renderPic = (photos) => {
+    if (photos[0].photo_reference !== null) {
       return (
         <img
           className='tile-img'
           alt='img'
-          src={`http://image.tmdb.org/t/p/w500//${movie.backdrop_path}`}
-        />
-      );
-    }
-    if (movie.poster_path !== null) {
-      return (
-        <img
-          className='tile-img '
-          alt='img'
-          src={`http://image.tmdb.org/t/p/w500//${movie.poster_path}`}
+          src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos[0].photo_reference}&sensor=false&key=AIzaSyAWKIPESodPq93nv0k7g7MsN9MzBaUxCzU`}
         />
       );
     }
@@ -58,17 +49,16 @@ class ListItem extends React.Component {
   };
 
   render() {
-    const { movie } = this.props;
+    const { place } = this.props;
     return (
-      <Link className='tile' to={`/movie/${movie.id}`}>
-        <div className='tile-img'>{this.renderPic(movie)}</div>
+      <Link className='tile' to={`/place/${place.place_id}`}>
+        <div className='tile-img'>{this.renderPic(place)}</div>
         <div className=' photo-overlay'>
           <div className='tile-text-container'>
             <div className='playbtn-container'>
-              <button className='playBtn '>▶</button>
+              <button className='playBtn '>🔍</button>
             </div>
-            <div>{this.renderTitle(movie.title)}</div>
-            <div>{this.renderDesc(movie.overview)}</div>
+            <div>{this.renderTitle(place.name)}</div>
           </div>
         </div>
       </Link>
@@ -76,7 +66,9 @@ class ListItem extends React.Component {
   }
 }
 
+// <div>{this.renderDesc(movie.overview)}</div> # add to line 63 after renderTitle
+
 ListItem.propTypes = {
-  movie: Proptypes.object,
+  place: Proptypes.object,
 };
 export default ListItem;
