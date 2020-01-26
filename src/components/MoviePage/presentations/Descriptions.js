@@ -1,6 +1,6 @@
-import React from "react";
-import Proptypes from "prop-types";
-import Cast from "./Cast";
+import React from 'react';
+import Proptypes from 'prop-types';
+import Cast from './Cast';
 
 const Poster = ({ theMovie, castList }) => (
   <div id="desc-container">

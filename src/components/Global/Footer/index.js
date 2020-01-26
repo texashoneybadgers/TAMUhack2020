@@ -7,7 +7,7 @@ const Footer = () => (
         Neflix
       </a>
       <p className="text-muted lead" href="#">
-        &copy;2018. All Rights Reserved by Chiu.
+        &copy;2020. All Rights Reserved by Texas Honey Badgers.
       </p>
       <a
         className="navbar-brand text-muted"

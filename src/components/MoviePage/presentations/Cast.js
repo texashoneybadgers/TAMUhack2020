@@ -1,5 +1,5 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import Proptypes from 'prop-types';
 
 const Cast = ({ person }) => (
   <div className="cast-item">
@@ -12,7 +12,7 @@ const Cast = ({ person }) => (
 );
 
 Cast.propTypes = {
-  person: Proptypes.object
+  person: Proptypes.object,
 };
 
 export default Cast;

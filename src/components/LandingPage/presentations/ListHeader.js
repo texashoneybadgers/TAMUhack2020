@@ -1,5 +1,5 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import Proptypes from 'prop-types';
 
 const ListHeader = ({ header }) => (
   <div className="list-title">
@@ -8,6 +8,6 @@ const ListHeader = ({ header }) => (
 );
 
 ListHeader.propTypes = {
-  header: Proptypes.string
+  header: Proptypes.string,
 };
 export default ListHeader;

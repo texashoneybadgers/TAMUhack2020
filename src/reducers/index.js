@@ -1,14 +1,12 @@
 import { combineReducers } from "redux";
 
-import theMovieReducer from "./theMovie.reducer";
-import castListReducer from "./castList.reducer";
+import thePlaceReducer from "./thePlace.reducer";
 import hompageListsReducer from "./hompageLists.reducer";
 import errorReducer from "./error.reducer";
 
 const rootReducer = combineReducers({
   hompageListsReducer,
-  theMovieReducer,
-  castListReducer,
+  thePlaceReducer,
   errorReducer
 });
 

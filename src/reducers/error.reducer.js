@@ -7,7 +7,7 @@ const initialState = {
 export default (state = initialState, action) => {
   const newState = Object.assign({}, state);
   switch (action.type) {
-    case constants.FETCH_TMDBAPI_ERROR:
+    case constants.FETCH_PLACES_ERROR:
       newState.error = action.payload;
       console.log(action.payload);
       return newState;

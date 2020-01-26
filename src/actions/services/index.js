@@ -1,3 +1,3 @@
-import tmdbAPI from "./tmdbAPI";
+import placesAPI from "./placesAPI";
 
-export { tmdbAPI };
+export { placesAPI };

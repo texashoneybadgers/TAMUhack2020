@@ -1,5 +1,5 @@
-import React from "react";
-import Proptypes from "prop-types";
+import React from 'react';
+import Proptypes from 'prop-types';
 
 const Poster = ({ posterPath }) => (
   <div id="poster-container">
@@ -8,7 +8,7 @@ const Poster = ({ posterPath }) => (
 );
 
 Poster.propTypes = {
-  posterPath: Proptypes.string
+  posterPath: Proptypes.string,
 };
 
 export default Poster;
