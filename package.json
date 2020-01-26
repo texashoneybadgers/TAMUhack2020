@@ -21,6 +21,7 @@
     "prop-types": "^15.6.2",
     "raf": "3.4.0",
     "react": "^16.4.2",
+    "react-delay-render": "^0.1.2",
     "react-dev-utils": "^5.0.3",
     "react-dom": "^16.4.2",
     "react-dropzone": "^5.1.0",

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class ListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.renderTitle = this.renderTitle.bind(this);
+    this.renderTitle = this.renderDesc.bind(this);
     this.renderDesc = this.renderDesc.bind(this);
     this.renderPic = this.renderPic.bind(this);
   }
@@ -29,36 +29,38 @@ class ListItem extends React.Component {
     return <p className='tile-desc'>{desc}</p>;
   };
 
-  renderPic = (photos) => {
-    if (photos[0].photo_reference !== null) {
+  renderPic = (reference) => {
+    if (reference !== null) {
       return (
         <img
           className='tile-img'
           alt='img'
-          src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photos[0].photo_reference}&sensor=false&key=AIzaSyD52d6XFSXUvS35hmTs5IANGP6TKs_It_E`}
+          src={`https://maps.googleapis.com/maps/api/place/photo?&maxwidth=1000&photoreference=${reference}&sensor=false&key=AIzaSyD52d6XFSXUvS35hmTs5IANGP6TKs_It_E`}
         />
       );
     }
     return (
       <img
-        alt='img'
-        className='tile-img'
-        src='http://via.placeholder.com/280x160'
+      alt='img'
+      className='tile-img'
+      src='http://via.placeholder.com/280x160'
       />
     );
   };
 
   render() {
     const { place } = this.props;
+    console.log(place.photos);
     return (
       <Link className='tile' to={`/place/${place.place_id}`}>
-        <div className='tile-img'>{this.renderPic(place)}</div>
+        <div className='tile-img'>{this.renderPic(place.photos[0].photo_reference)}</div>
         <div className=' photo-overlay'>
           <div className='tile-text-container'>
             <div className='playbtn-container'>
               <button className='playBtn '>🔍</button>
             </div>
-            <div>{this.renderTitle(place.name)}</div>
+            <div className='titlePlace'>{this.renderTitle(place.name)}</div>
+            <div className='vicinity'>{this.renderDesc(place.vicinity)}</div>
           </div>
         </div>
       </Link>

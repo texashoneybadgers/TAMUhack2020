@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDelayRender from 'react-delay-render';
 import Proptypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import $ from 'jquery';
@@ -47,28 +48,27 @@ class PlaceList extends React.Component {
   };
 
   render() {
-    const { placeList } = this.props;
+    const placeList = this.props.PlaceList;
+    console.log(placeList);
     return (
-      <div className='list-container'>
-        <span
-          onClick={this.handleLeftClick}
-          className='left-controls'
-          role='button'
-        />
-
-        <div className='module-section clearfix'>
-          {/* eslint-disable-next-line react/no-string-refs */}
-          <ul id='content' ref='content'>
-            {/* <div className='listRow'>{this.renderPlaceList(placeList)}</div> */}
-          </ul>
+        <div className='list-container'>
+          <span
+            onClick={this.handleLeftClick}
+            className='left-controls'
+            role='button'
+          />
+          <div className='module-section clearfix'>
+            {/* eslint-disable-next-line react/no-string-refs */}
+            <ul id='content' ref='content'>
+              <div className='listRow'>{this.renderPlaceList(placeList)}</div>
+            </ul>
+          </div>
+          <span
+            onClick={this.handleRightClick}
+            className='right-controls'
+            role='button'
+          />
         </div>
-
-        <span
-          onClick={this.handleRightClick}
-          className='right-controls'
-          role='button'
-        />
-      </div>
     );
   }
 }
@@ -76,4 +76,5 @@ class PlaceList extends React.Component {
 PlaceList.propTypes = {
   placeList: Proptypes.array,
 };
+// export default ReactDelayRender({ delay: 100 })(PlaceList);
 export default PlaceList;

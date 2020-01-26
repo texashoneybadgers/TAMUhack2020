@@ -18,8 +18,8 @@ class HomeList extends React.Component {
       <div>
         <ListHeader header='Restaurants' />
         <PlaceList PlaceList={restaurants} />
-        <ListHeader header='Lodging' />
-        <PlaceList PlaceList={hotels} />
+        {/* <ListHeader header='Lodging' /> */}
+        {/* <PlaceList PlaceList={hotels} /> */}
       </div>
     );
   }
