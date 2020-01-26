@@ -9,6 +9,7 @@ class HomeList extends React.Component {
     const { fetchRestaurants, fetchHotels } = this.props;
     fetchRestaurants();
     fetchHotels();
+    console.log('mounted');
   }
 
   render() {
