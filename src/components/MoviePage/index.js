@@ -1,13 +1,13 @@
 import React from 'react';
-import ViewMovie from './ViewMovie';
+import ViewPlace from './ViewPlace';
 import { Nav, Footer } from '@/components/Global';
 
-const Movie = () => (
+const Place = () => (
   <div>
     <Nav />
-    <ViewMovie />
+    <ViewPlace />
     <Footer />
   </div>
 );
 
-export default Movie;
+export default Place;

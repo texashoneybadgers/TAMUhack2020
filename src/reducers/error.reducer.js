@@ -9,7 +9,6 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case constants.FETCH_PLACES_ERROR:
       newState.error = action.payload;
-      console.log(action.payload);
       return newState;
     default:
       return state;

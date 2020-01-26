@@ -11,6 +11,14 @@
   font-weight: bold;
 }
 
+.p {
+  font-size: 100px;
+}
+
+.ListHeader {
+  font-size: 100px;
+}
+
 .listRow {
   display: flex;
   width: 100%;
@@ -117,7 +125,7 @@ html {
     }
   }
   .tile-title {
-    font-size: 0.8em;
+    font-size: 0.100px;
   }
   .listRow {
     &:hover {

@@ -1,41 +1,33 @@
 import React from 'react';
 import Proptypes from 'prop-types';
-import Cast from './Cast';
 
-const Poster = ({ theMovie, castList }) => (
+const MapP = ({ thePlace }) => (
   <div id='desc-container'>
     <h4 className='desc-item'>
-      <div className='movie-title'>{theMovie.title}</div>
+      <div className='movie-title'>{thePlace.status}</div>
     </h4>
     <p className='desc-item'>
       <b className='desc-title'>Rating:</b>
-      {theMovie.vote_average}
+      {thePlace.status}
     </p>
     <p className='desc-item'>
       <b className='desc-title'>Runtime:</b>
-      {theMovie.runtime}
+      {thePlace.status}
       minutes
     </p>
     <p className='desc-item'>
       <b className='desc-title'>Released date:</b>
-      {theMovie.release_date}
+      {thePlace.status}
     </p>
     <p id='overview' className='desc-item'>
       <b className='desc-title'>Overview:</b>
-      {theMovie.overview}
+      {thePlace.status}
     </p>
-    <b className='desc-title'>Cast:</b>
-    <ul id='cast-container'>
-      {castList.map(person => (
-        <Cast key={person.id} person={person} />
-      ))}
-    </ul>
   </div>
 );
 
-Poster.propTypes = {
-  theMovie: Proptypes.object,
-  castList: Proptypes.array,
+MapP.propTypes = {
+  thePlace: Proptypes.object,
 };
 
-export default Poster;
+export default MapP;

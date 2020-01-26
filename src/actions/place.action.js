@@ -4,7 +4,7 @@ import { placesAPI } from './services';
 export default {
   fetchThePlace: place_id => async (dispatch) => {
     try {
-      const response = await placesAPI(`place_id=${place_id}?`, '&fields=photos[],name,geometry,place_id,rating,formatted_address,formatted_phone_number,icon,opening_hours,price_level,website');
+      const response = await placesAPI(`details/json?place_id=${place_id}`, '&fields=name,geometry,place_id,rating,formatted_address,formatted_phone_number,icon,opening_hours,price_level,website');
       const { data } = response;
       dispatch({
         type: constants.FETCH_THEPLACE,

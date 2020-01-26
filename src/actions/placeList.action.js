@@ -4,7 +4,7 @@ import { placesAPI } from './services';
 export default {
   fetchRestaurants: () => async (dispatch) => {
     try {
-      const response = await placesAPI('location=41.8781,-87.6298&radius=16093.4', '&type=restaurant&keyword=mexican');
+      const response = await placesAPI('nearbysearch/json?location=49.246292,-123.116226&radius=16093.4', '&type=restaurant&keyword=mexican');
       const { data } = response;
       console.log(data);
       dispatch({
@@ -21,7 +21,7 @@ export default {
   },
   fetchHotels: () => async (dispatch) => {
     try {
-      const response = await placesAPI('location=29.9902,95.3368&radius=16093.4', '&type=lodging&keyword=hotel');
+      const response = await placesAPI('nearbysearch/json?location=49.246292,-123.116226&radius=16093.4', '&type=lodging&keyword=hotel');
       const { data } = response;
       dispatch({
         type: constants.FETCH_HOTEL,

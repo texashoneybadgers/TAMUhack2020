@@ -1,4 +1,4 @@
-import Poster from './Poster';
+import MapP from './MapP';
 import Descriptions from './Descriptions';
 
-export { Descriptions, Poster };
+export { Descriptions, MapP };

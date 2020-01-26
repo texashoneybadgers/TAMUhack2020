@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?';
+const URL = 'https://maps.googleapis.com/maps/api/place/';
 const API_KEY = '&key=AIzaSyD52d6XFSXUvS35hmTs5IANGP6TKs_It_E';
 
 export default (query, queryVariable) => {

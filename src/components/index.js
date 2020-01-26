@@ -10,7 +10,7 @@ const Router = () => (
   <BrowserRouter>
     <Switch>
       <Route path='/' exact component={LandingPage} />
-      <Route path='/movie/:movieId' exact component={MoviePage} />
+      <Route path='/place/:place_id' exact component={MoviePage} />
       <Route exact path='/:unfoundLocation' component={NotFoundPage} />
     </Switch>
   </BrowserRouter>

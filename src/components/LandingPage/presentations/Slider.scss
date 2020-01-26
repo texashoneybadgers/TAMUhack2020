@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-.slider {
-    margin-bottom: 80px;
-}
-
-.titlePlace {
-    font-size: 30px;
-}
-
-.text {
-    text-align: left;
-    .title {
-        font-size: 45px;
-        font-weight: bold;
-    }
-    .sub-title {
-        color: $whiteGrey;
-        background-color: transparent;
-    }
-    .castGenreList {
-        color: $netflixWhite;
-    }
-}
-
-.carousel-item {
-    max-height: 500px;
-    max-width: 100%;
-    overflow: hidden;
-    img {
-        object-fit: cover; 
-        width: 100%; 
-        height: 550px; 
-    }
-}
-
-
-=======
 .slider {
     margin-bottom: 80px;
 }
@@ -60,6 +23,10 @@
     }
 }
 
+.titlePlace {
+    font-size: 30px;
+}
+
 .carousel-item {
     max-height: 500px;
     max-width: 100%;
@@ -72,5 +39,4 @@
 }
 
 
->>>>>>> dd60434df331b47ef86649374c363bd7d54e206c
 @include addListBtn;
